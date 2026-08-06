@@ -1,0 +1,130 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f4f5f7;
+  margin: 0;
+  color: #1f2937;
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+header h1 {
+  margin: 0 0 4px;
+  font-size: 26px;
+  color: #1f3864;
+}
+
+header p {
+  margin: 0 0 24px;
+  color: #555;
+  font-size: 14px;
+}
+
+section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+input[type="file"], textarea, input[type="text"] {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+button {
+  background: #1f3864;
+  color: #fff;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover { background: #16294d; }
+
+#upload-status {
+  font-size: 13px;
+  color: #555;
+  margin-top: 10px;
+  white-space: pre-wrap;
+}
+
+.hidden { display: none; }
+
+#messages {
+  height: 360px;
+  overflow-y: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: #fafafa;
+}
+
+.msg {
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  max-width: 85%;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+.msg.user {
+  background: #1f3864;
+  color: #fff;
+  margin-left: auto;
+}
+
+.msg.assistant {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+.chat-input {
+  display: flex;
+  gap: 8px;
+}
+
+.chat-input input { flex: 1; }
+
+.quick-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.quick-actions button {
+  background: #eef1f7;
+  color: #1f3864;
+  font-size: 12px;
+  padding: 6px 10px;
+}
+
+.quick-actions button:hover { background: #dde3ee; }

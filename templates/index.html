@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Resume Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Resume Assistant</h1>
+      <p>Upload your resume, optionally paste a job description, then ask questions or ask for a tailored rewrite.</p>
+    </header>
+
+    <section id="setup-panel">
+      <div class="field">
+        <label for="resume-file">Resume (.pdf or .txt)</label>
+        <input type="file" id="resume-file" accept=".pdf,.txt" />
+      </div>
+      <div class="field">
+        <label for="jd-text">Target job description (optional)</label>
+        <textarea id="jd-text" rows="5" placeholder="Paste the job description here..."></textarea>
+      </div>
+      <button id="upload-btn">Start session</button>
+      <p id="upload-status"></p>
+    </section>
+
+    <section id="chat-panel" class="hidden">
+      <div id="messages"></div>
+      <div class="chat-input">
+        <input type="text" id="chat-text" placeholder="e.g. What skills am I missing for this JD?" />
+        <button id="send-btn">Send</button>
+      </div>
+      <div class="quick-actions">
+        <button data-q="What skills from the job description am I missing?">Missing skills?</button>
+        <button data-q="Rewrite my professional summary to better match this job description.">Tailor summary</button>
+        <button data-q="Which of my projects is most relevant to this role and why?">Best project fit?</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
