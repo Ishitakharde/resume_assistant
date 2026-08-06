@@ -2,3 +2,4 @@
 resume_assistant.db
 __pycache__/
 *.pyc
+.venv/ Save and close
